@@ -1,33 +1,46 @@
 import os
-from .api.graph_api import *
+import asyncio
 from dotenv import load_dotenv
 
+from msgraph_python.api import *
+from msgraph_python.exceptions import *
 
+
+# Manage the Ori Application
 class Ori:
-    def __init__(self, api):
-        self.api = api # GraphAPI object
+    def __init__(self, api_client):
+        self.api_client = api_client
+
 
 def main():
     # Load the environment variables
     load_dotenv()
     client_id = os.getenv("CLIENT_ID")
     tenant_id = os.getenv("TENANT_ID")
-    redirect_uri = os.getenv("REDIRECT_URI")
-    if not check_env_vars(client_id, tenant_id, redirect_uri="https://login.microsoftonline.com/common/oauth2/nativeclient"):
+    if not check_env_vars(client_id, tenant_id):
         return
+    asyncio.run(start_ori(client_id=client_id, tenant_id=tenant_id))
 
-    # Create a new GraphAPI object
+
+async def start_ori(client_id, tenant_id):
+    # Create a new GraphAPI object, and validate the connection
     try: 
-        ori = Ori(NewGraphAPI(client_id, tenant_id, redirect_uri))
-    except Exception as e:
-        print(f"Failed to Create new : {e}")
+        api_client = await NewGraphAPI(client_id=client_id, tenant_id=tenant_id)
+        ori = Ori(api_client=api_client)
+    except AuthorizationException as e:
+        print(f"{e}")
         return
     
-    ori.api.get_user_info()
+    # Get the user info
+    try:
+        await ori.api_client.get_user_info()
+    except RequestException as e:
+        print(f"{e}")
+        return
 
 
 # Check if the environment variables are set
-def check_env_vars(client_id, tenant_id, redirect_uri):
+def check_env_vars(client_id, tenant_id):
     if not client_id:
         print("Please set the CLIENT_ID environment variable.")
         return False
@@ -35,11 +48,9 @@ def check_env_vars(client_id, tenant_id, redirect_uri):
     if not tenant_id:
         print("Please set the TENANT_ID environment variable.")
         return False
-    if not redirect_uri:
-        print("Please set the REDIRECT_URI environment variable.")
-        return False
 
     return True
+
 
 if __name__ == "__main__":
     main()
