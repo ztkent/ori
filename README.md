@@ -3,4 +3,4 @@ Manage notifications and reminders for Microsoft Teams with [BlinkStick](https:/
 
 ## Setup
 - The application requires a connection to the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph).
-- This is done with the wrapper, [MSGraph-Python](https://github.com/Ztkent/msgraph-python).
+- This is done with the wrapper [MSGraph-Python](https://github.com/Ztkent/msgraph-python).
