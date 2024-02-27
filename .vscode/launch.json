@@ -2,10 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "Ori",
             "type": "debugpy",
             "request": "launch",
             "module": "ori"
+        },
+        {
+            "name": "Ori Sudo",
+            "type": "node",
+            "request": "launch",
+            "preLaunchTask": "sudoer"
         }
     ]
 }

@@ -1,6 +1,8 @@
 import os
 import asyncio
+from time import sleep
 from dotenv import load_dotenv
+from blinkstick import blinkstick
 
 from msgraph_python.api import *
 from msgraph_python.exceptions import *
@@ -23,6 +25,12 @@ def main():
 
 
 async def start_ori(client_id, tenant_id):
+    for bstick in blinkstick.find_all():
+        # bstick.set_random_color()
+        bstick.set_color(red=255,green=0,blue=0)
+        sleep(5)
+        bstick.turn_off()
+
     # Create a new GraphAPI object, and validate the connection
     try: 
         api_client = await NewGraphAPI(client_id=client_id, tenant_id=tenant_id)
@@ -37,6 +45,7 @@ async def start_ori(client_id, tenant_id):
     except RequestException as e:
         print(f"{e}")
         return
+    
 
 
 # Check if the environment variables are set

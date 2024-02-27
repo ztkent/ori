@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sudoer",
+            "type": "shell",
+            "command": "sudo ${workspaceFolder}/.venv/bin/python3 ${workspaceFolder}/ori/ori.py",
+            "problemMatcher": []
+        }
+    ]
+}
