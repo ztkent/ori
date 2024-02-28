@@ -4,7 +4,7 @@
         {
             "label": "sudoer",
             "type": "shell",
-            "command": "sudo ${workspaceFolder}/.venv/bin/python3 ${workspaceFolder}/ori/ori.py",
+            "command": "sudo ${workspaceFolder}/.venv/bin/python3 -m ori",
             "problemMatcher": []
         }
     ]

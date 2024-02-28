@@ -8,6 +8,27 @@
             "module": "ori"
         },
         {
+            "name": "Ori Google",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["-service", "google"],
+            "module": "ori"
+        },
+        {
+            "name": "Ori Google Mail",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["-service", "google", "-scopes", "mail"],
+            "module": "ori"
+        },
+        {
+            "name": "Ori Microsoft",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["-service", "microsoft"],
+            "module": "ori"
+        },
+        {
             "name": "Ori Sudo",
             "type": "node",
             "request": "launch",
