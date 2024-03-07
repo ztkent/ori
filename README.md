@@ -2,7 +2,6 @@
 Manage notifications and reminders with [BlinkStick](https://www.blinkstick.com).  
 
 ## Usage
-
 #### Supported Services:
 - Microsoft: 
     - Teams
@@ -12,7 +11,7 @@ Manage notifications and reminders with [BlinkStick](https://www.blinkstick.com)
     - Gmail
     - Calendar
 
-#### Setup your environment
+#### Setup your environment:
 ```bash
 pip install -r requirements.txt
 # Microsoft Required ENVs
@@ -21,7 +20,7 @@ export TENANT_ID=YOUR_TENANT_ID
 # Google Required ENVs
 export GCREDS_PATH=YOUR_PATH_TO_CREDENTIALS_JSON
 ```
-#### Run the app
+#### Run the app:
 ```bash
 # Connect to all services
 python3 -m ori
