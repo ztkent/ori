@@ -6,15 +6,13 @@ To connect, you'll need to authenticate with each service you want to use:
 #### 
 - Microsoft
     - Azure AD requires a connection to the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph).
-        - This is done with the wrapper [MSGraph-Python](https://github.com/Ztkent/msgraph-python).
-        - Follow the instructions [here](https://github.com/Ztkent/msgraph-python) to register a new app with Azure AD.
+        - This is done with [MSGraph-Python](https://github.com/Ztkent/msgraph-python).
+        - Follow the instructions [here](https://github.com/Ztkent/msgraph-python?tab=readme-ov-file#setup) to register a new app with Azure AD.
 - Google
-    - Google requires a connection to the [Google API](https://developers.google.com/gmail/api).
-        - This is done with the SDK [google-api-python-client](https://github.com/googleapis/google-api-python-client)
-        - You will need to generate a `credentials.json` file from the [Google Developer Console](https://console.developers.google.com/).
-            - "APIs & Services" > "Credentials"
-            - "Create credentials" > "OAuth client ID"
-            - "Desktop app" > "Create"
+    - Google requires a connection to the [Google Cloud API](https://cloud.google.com/apis/docs/overview).
+        - This is done with [GoogleAPI-Python](https://github.com/Ztkent/googleapi-python).
+        - Follow the instructions [here](https://github.com/Ztkent/googleapi-python?tab=readme-ov-file#setup) to create API authentication credentials.
+
 - BlinkStick
     - On Mac, it might require 'sudo' to detect connected BlinkSticks.
 
