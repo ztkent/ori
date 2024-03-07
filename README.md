@@ -3,11 +3,11 @@ Manage notifications and reminders with [BlinkStick](https://www.blinkstick.com)
 
 ## Usage
 #### Supported Services:
-- Microsoft: 
+- Microsoft
     - Teams
     - Outlook
     - Calendar
-- Google:
+- Google
     - Gmail
     - Calendar
 
