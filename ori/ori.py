@@ -1,9 +1,6 @@
-import os
 import asyncio
 import argparse
-from time import sleep
 from dotenv import load_dotenv
-from blinkstick import blinkstick
 
 import ori.blink as ori_blink
 from ori.ori_class import Ori
