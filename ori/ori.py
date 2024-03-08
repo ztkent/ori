@@ -39,6 +39,7 @@ def main():
 
 async def start_ori(selected_services, selected_scopes):
     ori = Ori()
+    ori_blink.startup_blinker()
     # Create a new GoogleAPI client
     if "google" in selected_services:
         try: 
