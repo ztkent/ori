@@ -25,8 +25,8 @@ export GCREDS_PATH=YOUR_PATH_TO_CREDENTIALS_JSON
 # Connect to all services
 python3 -m ori
 # Connect to specific services
-python3 -m ori -service "google" -scopes "gmail"
-python3 -m ori -service "google,microsoft" -scopes "gmail,calendar,teams-chat,teams-channel"
+python3 -m ori -service "google" -scopes "mail" -interval 60
+python3 -m ori -service "google,microsoft" -scopes "mail,calendar,teams-chat,teams-channel"
 ```
 
 ## Setup

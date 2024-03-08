@@ -18,6 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description="Start Ori")
     parser.add_argument('-service', type=str, default="google,microsoft" ,help='Select services to enable. Example: -service "google,microsoft"')
     parser.add_argument('-scopes', type=str, default="mail,calendar,teams-chat,teams-channel" ,help='Select notification channels to enable. Example: -scopes "mail,calendar,teams-chat,teams-channel"')
+    parser.add_argument('-interval', type=int, default=60, help='Set the check interval in seconds. Example: -interval 60')
     args = parser.parse_args()
     
     # Select the services to enable
@@ -35,9 +36,9 @@ def main():
         return
 
     # Start the Ori application
-    asyncio.run(start_ori(selected_services, selected_scopes))
+    asyncio.run(start_ori(selected_services, selected_scopes, args.interval))
 
-async def start_ori(selected_services, selected_scopes):
+async def start_ori(selected_services, selected_scopes, check_interval):
     ori = Ori()
     ori_blink.startup_blinker()
     # Create a new GoogleAPI client
@@ -70,5 +71,6 @@ async def start_ori(selected_services, selected_scopes):
         except Exception as e:
             print(f"An error occurred: {e}")
 
-        # Wait 3 minutes before checking again
-        await asyncio.sleep(180)
+        # Wait 1 minute before checking again
+        print(f"Waiting {check_interval} seconds...")
+        await asyncio.sleep(check_interval)
