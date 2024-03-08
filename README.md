@@ -7,6 +7,7 @@ Manage notifications and reminders with [BlinkStick](https://www.blinkstick.com)
 |---------|-------------------|-------|-------|
 | Gmail | Unread messages | Red (255, 0, 0) | mail |
 | Google Calendar | Today's events | Green (0, 255, 0) | calendar |
+| Google Tasks | Today's Tasks | Orange (255, 165, 0) | tasks |
 | Outlook | Unread emails | Blue (0, 0, 255) | mail |
 | Outlook | Today's calendar events | Yellow (255, 255, 0) | calendar |
 | Teams | Unread chat messages | Magenta (255, 0, 255) | teams-chat |

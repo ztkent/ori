@@ -25,6 +25,12 @@ class Ori:
                     "today's Google Calendar events": ("Google Calendar", self.google_api.get_todays_calendar_events),
                 }
                 google_channels.update(temp_channels)
+            if "tasks" in selected_scopes:
+                temp_channels = {
+                    # "get Google Tasks": ("Google Tasks", self.google_api.get_tasks),
+                    "today's Google Tasks": ("Google Tasks", self.google_api.get_todays_tasks),
+                }
+                google_channels.update(temp_channels)
             # Add all Google Channels in scope to the selected channels
             selected_channels.update(google_channels)
 

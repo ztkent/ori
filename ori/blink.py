@@ -5,6 +5,7 @@ from blinkstick import blinkstick
 NOTIFICATION_COLORS = {
     "unread Gmail messages":          (255, 0, 0),     # Red
     "today's Google Calendar events": (0, 255, 0),     # Green
+    "today's Google Tasks":           (255, 165, 0),   # Orange
     "unread Outlook emails":          (0, 0, 255),     # Blue
     "today's calendar events":        (255, 255, 0),   # Yellow
     "unread Teams chat messages":     (255, 0, 255),   # Magenta
