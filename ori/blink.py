@@ -14,8 +14,9 @@ def notify_alerts(alerts: dict):
         print(f"Found BlinkStick: {bstick.get_serial()}")
         for alert_type, _ in alerts.items():
             print(alert_type)
-            bstick.set_color(name=alert_type, red=255, green=0, blue=0)
-            sleep(1)
+            bstick.set_color(red=random.randint(0, 255), green=random.randint(0, 255), blue=random.randint(0, 255))
+            sleep(5)
+            bstick.turn_off()
 
 def startup_blinker():
     print("Starting Ori...")
