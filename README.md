@@ -2,14 +2,15 @@
 Manage notifications and reminders with [BlinkStick](https://www.blinkstick.com).  
 
 ## Usage
-#### Supported Services:
-- Microsoft
-    - Teams
-    - Outlook
-    - Calendar
-- Google
-    - Gmail
-    - Calendar
+#### Supported Services: 
+| Service | Notification Type | Color | Scope |
+|---------|-------------------|-------|-------|
+| Gmail | Unread messages | Red (255, 0, 0) | mail |
+| Google Calendar | Today's events | Green (0, 255, 0) | calendar |
+| Outlook | Unread emails | Blue (0, 0, 255) | mail |
+| Outlook | Today's calendar events | Yellow (255, 255, 0) | calendar |
+| Teams | Unread chat messages | Magenta (255, 0, 255) | teams-chat |
+| Teams | Unread channel messages | Cyan (0, 255, 255) | teams-channel |
 
 #### Setup your environment:
 ```bash
@@ -39,4 +40,3 @@ python3 -m ori -service "google,microsoft" -scopes "mail,calendar,teams-chat,tea
     - Google requires a connection to the [Google Cloud API](https://cloud.google.com/apis/docs/overview).
     - This is done with [GoogleAPI-Python](https://github.com/Ztkent/googleapi-python).
     - Follow the instructions [here](https://github.com/Ztkent/googleapi-python?tab=readme-ov-file#setup) to create API authentication credentials.
-
