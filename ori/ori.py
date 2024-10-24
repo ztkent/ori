@@ -50,7 +50,7 @@ async def start_ori(selected_services, selected_scopes, check_interval):
     # Create a new GraphAPI client
     if "microsoft" in selected_services:
         try: 
-            graph_api = await NewGraphAPI(scopes=selected_scopes)
+            graph_api = await NewGraphAPI(scopes=selected_scopes, interactive=True)
             ori.graph_api = graph_api
         except MicrosoftAuthorizationException as e:
             print(f"{e}")

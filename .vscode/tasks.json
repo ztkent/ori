@@ -4,8 +4,10 @@
         {
             "label": "sudoer",
             "type": "shell",
-            "command": "sudo ${workspaceFolder}/.venv/bin/python3 -m ori -service google -scopes mail,calendar,tasks",
+            "command": "sudo ${workspaceFolder}/.venv/bin/python3 -m ori -service microsoft -scopes mail,calendar",
             "problemMatcher": []
         }
     ]
 }
+// source ~/code/ztkent/ori/.venv/bin/activate
+// sudo python3 -m ori -service google -scopes mail,calendar,tasks

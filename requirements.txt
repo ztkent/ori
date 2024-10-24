@@ -17,7 +17,7 @@ google-api-python-client==2.121.0
 google-auth==2.28.1
 google-auth-httplib2==0.2.0
 google-auth-oauthlib==1.2.0
-googleapi_python @ git+https://github.com/Ztkent/googleapi-python.git@ba371ed9d6c03fdce4e1ccef76e7c997a9584676
+googleapi_python @ git+https://github.com/ztkent/googleapi-python.git@ba371ed9d6c03fdce4e1ccef76e7c997a9584676
 googleapis-common-protos==1.62.0
 h11==0.14.0
 h2==4.1.0
@@ -37,7 +37,7 @@ msal==1.27.0
 msal-extensions==1.1.0
 msgraph-core==1.0.0
 msgraph-sdk==1.1.0
-msgraph_python @ git+https://github.com/Ztkent/msgraph-python.git@5a0b50290854afd5eb486fe06b3f3ed4a8b942a9
+msgraph_python @ git+https://github.com/ztkent/msgraph-python.git@5a0b50290854afd5eb486fe06b3f3ed4a8b942a9
 multidict==6.0.5
 oauthlib==3.2.2
 opentelemetry-api==1.23.0

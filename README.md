@@ -35,9 +35,9 @@ python3 -m ori -service "google,microsoft" -scopes "mail,calendar,teams-chat,tea
 ### Configuration:
 - Microsoft
     - Azure AD requires a connection to the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph).
-    - This is done with [MSGraph-Python](https://github.com/Ztkent/msgraph-python).
-    - Follow the instructions [here](https://github.com/Ztkent/msgraph-python?tab=readme-ov-file#setup) to register a new app with Azure AD.
+    - This is done with [MSGraph-Python](https://github.com/ztkent/msgraph-python).
+    - Follow the instructions [here](https://github.com/ztkent/msgraph-python?tab=readme-ov-file#setup) to register a new app with Azure AD.
 - Google
     - Google requires a connection to the [Google Cloud API](https://cloud.google.com/apis/docs/overview).
-    - This is done with [GoogleAPI-Python](https://github.com/Ztkent/googleapi-python).
-    - Follow the instructions [here](https://github.com/Ztkent/googleapi-python?tab=readme-ov-file#setup) to create API authentication credentials.
+    - This is done with [GoogleAPI-Python](https://github.com/ztkent/googleapi-python).
+    - Follow the instructions [here](https://github.com/ztkent/googleapi-python?tab=readme-ov-file#setup) to create API authentication credentials.
